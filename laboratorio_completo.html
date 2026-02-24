@@ -10,8 +10,9 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <style>
         * { font-family: 'Segoe UI', sans-serif; }
-        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
-        .navbar { background: rgba(255,255,255,0.95); }
+        body { background: #f5f5f5; }
+        .navbar { background: #667eea; }
+        .navbar-brand, .nav-link { color: white !important; }
         .section { display: none; padding: 80px 15px 30px; }
         .section.active { display: block; }
         .card-custom { background: white; border-radius: 20px; padding: 30px; max-width: 450px; margin: 0 auto; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
@@ -31,11 +32,15 @@
         .informe-box { background: white; border-radius: 20px; padding: 40px; max-width: 900px; margin: 30px auto; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
         .uni-header { text-align: center; border-bottom: 3px solid #667eea; padding-bottom: 25px; margin-bottom: 30px; }
         .uni-logo { font-size: 2.5rem; color: #667eea; }
-        .section-title { color: #333; font-weight: 600; margin-top: 20px; padding-bottom: 8px; border-bottom: 2px solid #e0e0e0; }
+        .section-title { color: #333; font-weight: 600; margin-top: 25px; padding-bottom: 8px; border-bottom: 2px solid #e0e0e0; }
         .exercise-box { background: #f8f9fa; border-radius: 15px; padding: 20px; margin: 15px 0; border-left: 4px solid #667eea; }
         .conclusion-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 15px; padding: 25px; margin-top: 25px; }
-        .hero-section { text-align: center; padding: 60px 20px; color: white; }
-        .hero-section h1 { font-size: 2.5rem; font-weight: 700; }
+        .hero-section { text-align: center; padding: 40px 20px; background: linear-gradient(135deg,#667eea,#764ba2); color: white; }
+        .hero-section h1 { font-size: 2rem; font-weight: 700; }
+        .screenshot-img { border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15); margin: 15px 0; width: 100%; max-width: 700px; display: block; margin-left: auto; margin-right: auto; }
+        .tech-badge { display: inline-block; background: #e9ecef; padding: 5px 12px; border-radius: 15px; font-size: 0.75rem; margin: 3px; color: #555; }
+        .github-box { background: #333; color: white; padding: 20px; border-radius: 10px; text-align: center; margin-top: 25px; }
+        .github-box a { color: #667eea; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -64,9 +69,11 @@
     <section id="inicio" class="section active">
         <div class="hero-section">
             <h1><i class="fas fa-calculator me-3"></i>Laboratorio #1</h1>
-            <p class="lead">Programación en Internet - Universidad Salesiana de Bolivia</p>
-            <p class="mt-3">Ingeniería de Sistemas - 7° Semestre</p>
-            <div class="row justify-content-center mt-5">
+            <p class="lead">Programación en Internet</p>
+            <p>Universidad Salesiana de Bolivia - Ingeniería de Sistemas - 7° Semestre</p>
+        </div>
+        <div class="container mt-4">
+            <div class="row justify-content-center">
                 <div class="col-md-3 mb-3">
                     <div class="card h-100" style="cursor:pointer" onclick="mostrar('ejercicio1')">
                         <div class="card-body text-center">
@@ -199,33 +206,89 @@
                 <p class="text-muted mb-0">Carrera: Ingeniería de Sistemas - 7° Semestre</p>
             </div>
             <h2 class="text-center mb-4"><i class="fas fa-laptop-code me-2"></i>Laboratorio #1</h2>
-            <h4 class="section-title">Introducción</h4>
-            <p>El presente laboratorio tiene como propósito el desarrollo de aplicaciones web utilizando tecnologías modernas como HTML5, CSS3, JavaScript, Bootstrap, jQuery y PHP. Se desarrollan tres ejercicios progresivos que permiten comprender desde los conceptos básicos hasta sistemas más complejos.</p>
-            <h4 class="section-title">Objetivos</h4>
+            
+            <h4 class="section-title"><i class="fas fa-book me-2"></i>Introducción</h4>
+            <p>El presente laboratorio tiene como propósito fundamental el desarrollo de aplicaciones web utilizando tecnologías modernas del ecosistema de Internet. En este primer laboratorio, se abordan tres ejercicios progresivos que permiten al estudiante comprender desde los conceptos básicos hasta la implementación de sistemas más complejos con validación cliente-servidor.</p>
+            <p>El laboratorio está estructurado para desarrollar una calculadora básica en tres versiones diferentes: la primera utilizando JavaScript puro (vanilla JS), la segunda empleando Bootstrap 5 y jQuery para un diseño responsivo y moderno, y la tercera implementa un sistema de login profesional.</p>
+            
+            <h4 class="section-title"><i class="fas fa-bullseye me-2"></i>Objetivos</h4>
             <ul>
-                <li>Implementar una calculadora con JavaScript puro</li>
-                <li>Desarrollar interfaces responsivas con Bootstrap y jQuery</li>
-                <li>Crear un sistema de autenticación con validaciones</li>
-                <li>Aplicar buenas prácticas de programación</li>
+                <li>Implementar una calculadora funcional utilizando JavaScript puro con validaciones completas.</li>
+                <li>Desarrollar interfaces responsivas utilizando Bootstrap 5 y jQuery.</li>
+                <li>Crear un sistema de autenticación seguro con PHP y Ajax.</li>
+                <li>Implementar validaciones tanto del lado del cliente como del servidor.</li>
+                <li>Utilizar mensajes de alerta elegantes con la librería SweetAlert2.</li>
+                <li>Aplicar buenas prácticas de programación y código limpio y comentado.</li>
             </ul>
-            <h4 class="section-title">Desarrollo</h4>
+            
+            <h4 class="section-title"><i class="fas fa-code me-2"></i>Desarrollo por Ejercicio</h4>
+            
             <div class="exercise-box">
                 <h5><i class="fas fa-1 me-2"></i>Ejercicio 1: Calculadora con JavaScript Puro</h5>
-                <p>Calculadora funcional con validaciones completas (campos vacíos, números, división por cero). Usa parseFloat() y mensajes de error con alert().</p>
+                <p>El primer ejercicio consiste en crear una calculadora funcional que realiza las operaciones básicas de suma, resta, multiplicación y división. La implementación utiliza HTML5 para la estructura y JavaScript vanilla para la lógica.</p>
+                <div><span class="tech-badge">HTML5</span><span class="tech-badge">JavaScript</span><span class="tech-badge">CSS3</span></div>
+                <h6 class="mt-2 fw-bold">Características:</h6>
+                <ul>
+                    <li>Funciones JavaScript separadas para cada operación.</li>
+                    <li>Validación de campos vacíos.</li>
+                    <li>Validación de tipos de datos.</li>
+                    <li>Validación para división entre cero.</li>
+                    <li>Uso de parseFloat() para decimales.</li>
+                    <li>Mensajes de error con alert().</li>
+                </ul>
             </div>
+            
             <div class="exercise-box">
-                <h5><i class="fas fa-2 me-2"></i>Ejercicio 2: Calculadora con Bootstrap + jQuery</h5>
-                <p>Mismo ejercicio con diseño moderno, responsivo, validaciones con jQuery y mensajes SweetAlert2.</p>
+                <h5><i class="fas fa-2 me-2"></i>Ejercicio 2: Calculadora con Bootstrap 5 y jQuery</h5>
+                <p>El segundo ejercicio replica la funcionalidad del primero, pero con un enfoque moderno utilizando Bootstrap 5 para el diseño responsivo y jQuery para las validaciones.</p>
+                <div><span class="tech-badge">Bootstrap 5</span><span class="tech-badge">jQuery</span><span class="tech-badge">SweetAlert2</span></div>
+                <h6 class="mt-2 fw-bold">Características:</h6>
+                <ul>
+                    <li>Diseño moderno con tarjeta centrada.</li>
+                    <li>Sistema de grid de Bootstrap.</li>
+                    <li>Botones con colores diferenciados.</li>
+                    <li>Animaciones suaves.</li>
+                    <li>Validaciones con jQuery.</li>
+                    <li>Mensajes con SweetAlert2.</li>
+                    <li>Diseño responsivo.</li>
+                </ul>
             </div>
+            
             <div class="exercise-box">
-                <h5><i class="fas fa-3 me-2"></i>Ejercicio 3: Sistema de Login</h5>
-                <p>Formulario de login con validación jQuery, simulación de autenticación y respuesta visual.</p>
+                <h5><i class="fas fa-3 me-2"></i>Ejercicio 3: Sistema de Login Profesional</h5>
+                <p>El tercer ejercicio implementa un sistema de autenticación completo con frontend y backend separado.</p>
+                <div><span class="tech-badge">HTML5</span><span class="tech-badge">Bootstrap 5</span><span class="tech-badge">jQuery</span><span class="tech-badge">PHP</span><span class="tech-badge">Ajax</span></div>
+                <h6 class="mt-2 fw-bold">Características:</h6>
+                <ul>
+                    <li>Formulario con validación jQuery.</li>
+                    <li>Comunicación mediante Ajax (POST).</li>
+                    <li>Backend PHP con validación.</li>
+                    <li>Protección contra inyección SQL básica.</li>
+                    <li>Respuesta JSON.</li>
+                    <li>Credenciales: admin / 123456</li>
+                </ul>
             </div>
+            
+            <h4 class="section-title"><i class="fas fa-images me-2"></i>Capturas de Pantalla</h4>
+            <img src="https://raw.githubusercontent.com/Beymar59254/Laboratorios/main/Capturas/Captura%20de%20pantalla%202026-02-23%20225321.png" alt="Captura 1" class="screenshot-img">
+            <img src="https://raw.githubusercontent.com/Beymar59254/Laboratorios/main/Capturas/Captura%20de%20pantalla%202026-02-23%20225332.png" alt="Captura 2" class="screenshot-img">
+            <img src="https://raw.githubusercontent.com/Beymar59254/Laboratorios/main/Capturas/Captura%20de%20pantalla%202026-02-23%20225400.png" alt="Captura 3" class="screenshot-img">
+            <img src="https://raw.githubusercontent.com/Beymar59254/Laboratorios/main/Capturas/Captura%20de%20pantalla%202026-02-23%20225412.png" alt="Captura 4" class="screenshot-img">
+            <img src="https://raw.githubusercontent.com/Beymar59254/Laboratorios/main/Capturas/Captura%20de%20pantalla%202026-02-23%20225444.png" alt="Captura 5" class="screenshot-img">
+            
             <div class="conclusion-box">
                 <h5><i class="fas fa-check-circle me-2"></i>Conclusiones</h5>
-                <p class="mb-0">El laboratorio permite desarrollar competencias fundamentales en desarrollo web, comprendiendo la diferencia entre cliente y servidor, y la importancia de las validaciones en ambos niveles.</p>
+                <p class="mb-0">El laboratorio #1 de Programación en Internet ha permitido desarrollar competencias fundamentales en el desarrollo web moderno. A través de los tres ejercicios propuestos, se logró implementar desde una calculadora básica con JavaScript puro hasta un sistema de autenticación completo con PHP y Ajax. Los estudiantes pudieron comprender la diferencia entre el desarrollo del lado del cliente (frontend) y del servidor (backend), así como la importancia de las validaciones en ambos niveles.</p>
             </div>
-            <div class="text-center mt-4">
+            
+            <div class="github-box">
+                <i class="fab fa-github me-2" style="font-size: 1.5rem;"></i>
+                <h5>Repositorio GitHub</h5>
+                <p class="mb-0">El código fuente completo está disponible en:</p>
+                <a href="https://github.com/Beymar59254/Laboratorios" target="_blank">https://github.com/Beymar59254/Laboratorios</a>
+            </div>
+            
+            <div class="text-center mt-4 text-muted">
                 <p class="mb-1"><strong>Estudiante:</strong> Beymar Fabian Rodriguez Machicado</p>
                 <p class="mb-1"><strong>Docente:</strong> Edson Veneros</p>
                 <p><strong>Fecha:</strong> 23/02/2026</p>
@@ -239,6 +302,7 @@
         function mostrar(id) {
             document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
             document.getElementById(id).classList.add('active');
+            window.scrollTo(0, 0);
         }
 
         // ========== EJERCICIO 1 - JavaScript Puro ==========
