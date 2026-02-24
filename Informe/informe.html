@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe - Laboratorio de Programación en Internet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        body { background: #f5f5f5; }
+        .report-container { background: white; max-width: 900px; margin: 40px auto; padding: 50px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .university-header { text-align: center; border-bottom: 3px solid #667eea; padding-bottom: 30px; margin-bottom: 40px; }
+        .university-logo { font-size: 3rem; color: #667eea; margin-bottom: 15px; }
+        .university-name { font-size: 1.4rem; font-weight: 700; color: #333; margin-bottom: 5px; }
+        .faculty { font-size: 1.1rem; color: #666; }
+        .report-title { text-align: center; color: #667eea; font-size: 2rem; font-weight: 700; margin: 30px 0; }
+        .lab-number { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; }
+        .section-title { color: #333; font-weight: 600; margin-top: 30px; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; }
+        .section-title i { color: #667eea; margin-right: 10px; }
+        .content-text { color: #555; line-height: 1.8; text-align: justify; }
+        .objective-list { list-style: none; padding: 0; }
+        .objective-list li { padding: 10px 0; padding-left: 30px; position: relative; }
+        .objective-list li::before { content: '\f058'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; left: 0; color: #667eea; }
+        .exercise-card { background: #f8f9fa; border-radius: 15px; padding: 25px; margin: 20px 0; border-left: 4px solid #667eea; }
+        .exercise-card h4 { color: #333; font-weight: 600; }
+        .tech-badge { display: inline-block; background: #e9ecef; padding: 5px 12px; border-radius: 15px; font-size: 0.8rem; margin: 3px; color: #555; }
+        .tech-badge.html { background: #e34f26; color: white; }
+        .tech-badge.js { background: #f7df1e; color: #333; }
+        .tech-badge.jquery { background: #0769ad; color: white; }
+        .tech-badge.bootstrap { background: #7952b3; color: white; }
+        .tech-badge.php { background: #777bb4; color: white; }
+        .tech-badge.ajax { background: #ff6f00; color: white; }
+        .tech-badge.sweetalert { background: #ff6f00; color: white; }
+        .screenshot-img { border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.15); margin: 15px 0; width: 100%; max-width: 700px; display: block; margin-left: auto; margin-right: auto; }
+        .conclusion-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 15px; padding: 30px; margin: 30px 0; }
+        .conclusion-box h4 { margin-bottom: 15px; }
+        .conclusion-box p { opacity: 0.95; line-height: 1.8; }
+        .github-link { background: #333; color: white; padding: 20px; border-radius: 10px; text-align: center; margin-top: 30px; }
+        .github-link a { color: #667eea; font-weight: 600; text-decoration: none; }
+        .github-link a:hover { text-decoration: underline; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #667eea; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        @media print { body { background: white; } .report-container { box-shadow: none; margin: 0; padding: 20px; } }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <a href="../index.html" class="back-link"><i class="fas fa-arrow-left me-1"></i> Volver al inicio</a>
+
+        <div class="university-header">
+            <div class="university-logo"><i class="fas fa-university"></i></div>
+            <div class="university-name">UNIVERSIDAD SALESIANA DE BOLIVIA</div>
+            <div class="faculty">Carrera: Ingeniería de Sistemas - 7° Semestre</div>
+        </div>
+
+        <h1 class="report-title"><i class="fas fa-laptop-code me-3"></i>Laboratorio #1<span class="lab-number d-block mt-2 mx-auto" style="width: fit-content;">Programación en Internet</span></h1>
+
+        <h3 class="section-title"><i class="fas fa-book"></i>Introducción</h3>
+        <p class="content-text">El presente laboratorio tiene como propósito fundamental el desarrollo de aplicaciones web utilizando tecnologías modernas del ecosistema de Internet. En este primer laboratorio, se abordan tres ejercicios progresivos que permiten al estudiante comprender desde los conceptos básicos hasta la implementación de sistemas más complejos con validación cliente-servidor.</p>
+        <p class="content-text">El laboratorio está estructurado para desarrollar una calculadora básica en tres versiones diferentes: la primera utilizando JavaScript puro (vanilla JS), la segunda empleando Bootstrap 5 y jQuery para un diseño responsivo y moderno, y la tercera implementa un sistema de login profesional con PHP y Ajax. Este enfoque permite al estudiante comparar las diferentes tecnologías y comprender sus ventajas y desventajas.</p>
+        <p class="content-text">Todas las implementaciones siguen las mejores prácticas de desarrollo web, incluyen validaciones robustas tanto en el cliente como en el servidor, y presentan un diseño profesional adecuado para aplicaciones reales.</p>
+
+        <h3 class="section-title"><i class="fas fa-bullseye"></i>Objetivos</h3>
+        <ul class="objective-list content-text">
+            <li>Implementar una calculadora funcional utilizando JavaScript puro con validaciones completas.</li>
+            <li>Desarrollar interfaces responsivas utilizando Bootstrap 5 y jQuery.</li>
+            <li>Crear un sistema de autenticación seguro con PHP y Ajax.</li>
+            <li>Implementar validaciones tanto del lado del cliente como del servidor.</li>
+            <li>Utilizar mensajes de alerta elegantes con la librería SweetAlert2.</li>
+            <li>Aplicar buenas prácticas de programación y código limpio y comentado.</li>
+            <li>Comprender el flujo de datos entre cliente y servidor mediante Ajax.</li>
+        </ul>
+
+        <h3 class="section-title"><i class="fas fa-code"></i>Desarrollo por Ejercicio</h3>
+
+        <div class="exercise-card">
+            <h4><i class="fas fa-1 me-2"></i>Ejercicio 1: Calculadora con JavaScript Puro</h4>
+            <p class="content-text mt-3">El primer ejercicio consiste en crear una calculadora funcional que realiza las operaciones básicas de suma, resta, multiplicación y división. La implementación utiliza HTML5 para la estructura y JavaScript vanilla para la lógica.</p>
+            <div class="mt-3"><span class="tech-badge html">HTML5</span><span class="tech-badge js">JavaScript</span><span class="tech-badge">CSS3</span></div>
+            <h5 class="mt-3 fw-bold">Características implementadas:</h5>
+            <ul class="content-text">
+                <li>Funciones JavaScript separadas para cada operación aritmética.</li>
+                <li>Validación de campos vacíos antes de realizar cálculos.</li>
+                <li>Validación de tipos de datos (verificación de números).</li>
+                <li>Validación especial para división entre cero.</li>
+                <li>Uso de parseFloat() para manejar números decimales correctamente.</li>
+                <li>Mensajes de error mediante alert().</li>
+                <li>Diseño básico pero ordenado y centrado en pantalla.</li>
+                <li>Código completamente comentado para fines educativos.</li>
+            </ul>
+        </div>
+
+        <div class="exercise-card">
+            <h4><i class="fas fa-2 me-2"></i>Ejercicio 2: Calculadora con Bootstrap 5 y jQuery</h4>
+            <p class="content-text mt-3">El segundo ejercicio replica la funcionalidad del primero, pero con un enfoque moderno utilizando Bootstrap 5 para el diseño responsivo y jQuery para la manipulación del DOM y las validaciones.</p>
+            <div class="mt-3"><span class="tech-badge bootstrap">Bootstrap 5</span><span class="tech-badge jquery">jQuery</span><span class="tech-badge sweetalert">SweetAlert2</span></div>
+            <h5 class="mt-3 fw-bold">Características implementadas:</h5>
+            <ul class="content-text">
+                <li>Diseño moderno con tarjeta centrada y bordes redondeados.</li>
+                <li>Sistema de grid de Bootstrap para botones organizados.</li>
+                <li>Botones con colores diferenciados para cada operación.</li>
+                <li>Animaciones suaves en botones y resultado.</li>
+                <li>Validaciones utilizando jQuery.</li>
+                <li>Mensajes de error y éxito elegantes con SweetAlert2.</li>
+                <li>Diseño completamente responsivo (adaptable a móviles).</li>
+                <li>Feedback visual en tiempo real.</li>
+            </ul>
+        </div>
+
+        <div class="exercise-card">
+            <h4><i class="fas fa-3 me-2"></i>Ejercicio 3: Sistema de Login Profesional</h4>
+            <p class="content-text mt-3">El tercer ejercicio implementa un sistema de autenticación completo con frontend y backend separado. Utiliza PHP para el procesamiento del lado del servidor y Ajax para la comunicación sin recargar la página.</p>
+            <div class="mt-3"><span class="tech-badge html">HTML5</span><span class="tech-badge bootstrap">Bootstrap 5</span><span class="tech-badge jquery">jQuery</span><span class="tech-badge php">PHP</span><span class="tech-badge ajax">Ajax</span><span class="tech-badge sweetalert">SweetAlert2</span></div>
+            <h5 class="mt-3 fw-bold">Características implementadas:</h5>
+            <ul class="content-text">
+                <li><strong>Frontend:</strong> Formulario con validación jQuery antes del envío.</li>
+                <li><strong>Comunicación:</strong> Envío de datos mediante Ajax (POST).</li>
+                <li><strong>Backend PHP:</strong> Recepción y validación de datos.</li>
+                <li><strong>Seguridad:</strong> Validación de entradas, sanitización contra inyección SQL básica.</li>
+                <li><strong>Respuesta:</strong> JSON con formato estructurado.</li>
+                <li><strong>Credenciales:</strong> Simulación con usuario: admin, contraseña: 123456.</li>
+                <li><strong>Estructura MVC:</strong> Código separado en index.html, script.js, styles.css, login.php.</li>
+                <li><strong>Logging:</strong> Registro de intentos de acceso.</li>
+            </ul>
+        </div>
+
+        <h3 class="section-title"><i class="fas fa-images"></i>Capturas de Pantalla</h3>
+
+        <img src="../Capturas/Captura de pantalla 2026-02-23 225321.png" alt="Captura 1" class="screenshot-img">
+        <img src="../Capturas/Captura de pantalla 2026-02-23 225332.png" alt="Captura 2" class="screenshot-img">
+        <img src="../Capturas/Captura de pantalla 2026-02-23 225400.png" alt="Captura 3" class="screenshot-img">
+        <img src="../Capturas/Captura de pantalla 2026-02-23 225412.png" alt="Captura 4" class="screenshot-img">
+        <img src="../Capturas/Captura de pantalla 2026-02-23 225444.png" alt="Captura 5" class="screenshot-img">
+
+        <div class="conclusion-box">
+            <h4><i class="fas fa-check-circle me-2"></i>Conclusiones</h4>
+            <p>El laboratorio #1 de Programación en Internet ha permitido desarrollar competencias fundamentales en el desarrollo web moderno. A través de los tres ejercicios propuestos, se logró implementar desde una calculadora básica con JavaScript puro hasta un sistema de autenticación completo con PHP y Ajax.</p>
+            <p class="mb-0">Los estudiantes pudieron comprender la diferencia entre el desarrollo del lado del cliente (frontend) y del servidor (backend), así como la importancia de las validaciones en ambos niveles para garantizar la seguridad y funcionalidad de las aplicaciones web. El uso de librerías como Bootstrap, jQuery y SweetAlert2 demuestra cómo estas herramientas facilitan el desarrollo rápido y profesional de interfaces web.</p>
+        </div>
+
+        <div class="github-link">
+            <i class="fab fa-github me-2" style="font-size: 1.5rem;"></i>
+            <h5>Repositorio GitHub</h5>
+            <p class="mb-2">El código fuente completo está disponible en:</p>
+            <a href="https://github.com/Beymar59254/Laboratorios" target="_blank">https://github.com/Beymar59254/Laboratorios</a>
+        </div>
+
+        <div class="text-center mt-5 text-muted">
+            <p class="mb-1"><i class="fas fa-user-graduate me-2"></i>Estudiante: Beymar Fabian Rodriguez Machicado</p>
+            <p class="mb-1"><i class="fas fa-calendar me-2"></i>Fecha de entrega: 23/02/2026</p>
+            <p class="mb-0"><i class="fas fa-chalkboard-teacher me-2"></i>Docente: Edson Veneros</p>
+        </div>
+    </div>
+</body>
+</html>
